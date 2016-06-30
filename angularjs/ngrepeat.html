@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Module 2</title>
+	<style>
+		body {
+			font-family: 'source sans pro';
+		}
+	</style>
+</head>
+<body ng-init="people = [{name: 'John', city: 'New York'}, {name: 'Jane', city: 'London'}, {name: 'Bob', city: 'Delhi'}];">
+	
+	<ul>
+		<li ng-repeat="person in people">
+			{{ person.name + ', ' + person.city}}
+		</li>
+	</ul>
+
+	<br><br>
+
+	<table>
+		<tr>
+			<td>Name</td>
+			<td>City</td>
+		</tr>
+		<tr ng-repeat="person in people">
+			<td>{{ person.name }}</td>
+			<td>{{ person.city }}</td>
+		</tr>
+	</table>
+	
+	<script src="angular.min.js"></script>
+
+
+</body>
+</html>
