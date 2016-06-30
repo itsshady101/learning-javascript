@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Filter Data</title>
+	<style>
+		body {
+			font-family: roboto;
+		}
+	</style>
+</head>
+<body ng-init="customers=[{joined: '2000-12-02', name: 'John', city: 'New York', orderTotal: 9.9946}, {joined: '2003-02-12', name: 'Jane', city: 'Ontario', orderTotal: 19.9946}, {joined: '2005-03-26', name: 'Alice', city: 'Italy', orderTotal: 2.2323}, {joined: '2010-01-02', name: 'Mia', city: 'Lebanon', orderTotal: 10.96}];">
+	
+	<h2>Customers</h2>
+	Filter: <input type="text">
+	<br><br>
+
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>City</th>
+			<th>Order Total</th>
+			<th>Joined</th>
+		</tr>
+		<tr ng-repeat="cust in customers">
+			<td>{{ cust.name | uppercase }}</td>
+			<td>{{ cust.city | lowercase }}</td>
+			<td>{{ cust.orderTotal | currency }}</td>
+			<td>{{ cust.joined | date }}</td>
+
+		</tr>
+	</table>
+	
+	<script src="angular.min.js"></script>
+
+
+</body>
+</html>
