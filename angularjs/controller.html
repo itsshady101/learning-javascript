@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Filter Data</title>
+	<style>
+		body {
+			font-family: roboto;
+		}
+	</style>
+</head>
+<body ng-controller="CustomerController">
+	
+	<div>
+		<h2>Customers</h2>
+		Filter: <input type="text" ng-model="customerFilter.name">
+		<br><br>
+
+		<table>
+			<tr>
+				<th ng-click="doSort('name')">Name</th>
+				<th ng-click="doSort('city')">City</th>
+				<th ng-click="doSort('orderTotal')">Order Total</th>
+				<th ng-click="doSort('joined')">Joined</th>
+			</tr>
+			<tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse ">
+				<td>{{ cust.name | uppercase }}</td>
+				<td>{{ cust.city | lowercase }}</td>
+				<td>{{ cust.orderTotal | currency }}</td>
+				<td>{{ cust.joined | date }}</td>
+
+			</tr>
+		</table>
+		
+		<br><br><br>
+
+		<h3>Add New Customer</h3>
+		<form ng-submit="formSubmit()">
+			Name: <input type="text" ng-model="name"> 
+			<br>
+			City: <input type="text" ng-model="city"> 
+			<br>
+			Joined: <input type="date" ng-model="joined">
+			<br>
+			OrderTotal: <input type="number" ng-model="total"> 
+			<br>
+			<input type="submit" value="submit">
+		</form>
+
+		<br>
+		<span>Total customers {{ customers.length }}</span>
+	</div>
+	
+	<script src="angular.min.js"></script>
+	<script src="app/controllers/customerController.js"></script>
+
+</body>
+</html>
