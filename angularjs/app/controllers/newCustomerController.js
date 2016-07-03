@@ -2,8 +2,10 @@ var app = angular.module('myApp', []);
 
 app.controller('userController' ,function() {
 
+	this.toggle = false;
+
 	this.stars = [
-		{name: "Rachell", age: 20},
+		{name: "Rachell", age: 29},
 		{name: "Alex", age: 25},
 		{name: "Ayush", age: 16}
 	];
