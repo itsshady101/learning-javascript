@@ -34,7 +34,8 @@
 			</tr>
 		</table>
 
-		<button ng-click="cont.toggle = true3">Show Names</button>
+		<button ng-if="!cont.toggle" ng-click="cont.toggle = true">Show Names</button>
+		<button ng-if="cont.toggle" ng-click="cont.toggle = false">Hide Names</button>
 
 		<br><br>
 
