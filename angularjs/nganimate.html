@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Let's Animate</title>
+	<style>
+		.over-20 {
+			background: blue;
+			color: #fff;
+		}
+		.under-20 {
+			background: pink;
+		}
+		.hidden {
+			display: none;
+		}
+		table.ng-enter {
+			transition: 0.3s ease all;
+			transform: translateX(-100%);
+			opacity: 0;
+		}
+
+		table.ng-enter.ng-enter-active {
+			transform: translateX(0%);
+			opacity: 1;	
+		}
+
+		table.ng-leave {
+			transition: 0.3s ease all;
+			transform: translateX(0%);
+			opacity: 1;
+		}
+
+		table.ng-leave.ng-leave-active {
+			transform: translateX(100%);
+			opacity: 0;
+		}
+	</style>
+</head>
+<body ng-controller = "userController as cont">
+	<div>
+
+		Search: <input type="text" ng-model="search"><br>
+		<table ng-if="cont.toggle">
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+			</tr>
+
+			<tr ng-repeat="star in cont.stars | filter:search"
+				ng-class="star.age > 20 ? 'over-20':'under-20'"
+			>
+				<td>{{star.name}}</td>
+				<td>{{star.age}}</td>
+				<td><img ng-src="{{star.img}}" ></td>
+			</tr>
+		</table>
+
+
+		<br><br>
+
+		<button ng-if="!cont.toggle" ng-click="cont.toggle = true">Show Names</button>
+		<button ng-if="cont.toggle" ng-click="cont.toggle = false">Hide Names</button>
+
+		<form ng-submit="cont.form()">
+			Name: <input type="text" ng-model="cont.name"><br>
+			Age: <input type="number" ng-model="cont.age"><br>
+			<input type="submit" value="submit">
+		</form>
+
+		<br><br>
+	</div>
+	
+	<script src="angular.min.js"></script>
+	<script src="angular-animate.js"></script>
+	<script src="app/controllers/newCustomerController.js"></script>
+</body>
+</html>
