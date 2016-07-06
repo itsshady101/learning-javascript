@@ -1,0 +1,17 @@
+{
+  "name": "angular",
+  "homepage": "https://github.com/itsshady101/learning-javascript",
+  "authors": [
+    "itsshady101 <pranjal9599@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
