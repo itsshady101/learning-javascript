@@ -5,12 +5,12 @@ app.config(function($stateProvider, $urlRouterProvider){
 
 	$stateProvider.state('home', {
 		url: '/',
-		template: '<h1>Hello</h1>'
+		templateUrl: 'app/views/home.html'
 	});
 
 	$stateProvider.state('about', {
 		url: '/about',
-		template: '<h1>About</h1>'
+		templateUrl: 'app/views/about.html'
 	});
 })
 app.controller('userController' ,function() {
