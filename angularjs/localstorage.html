@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="localStorage">
+<head>
+	<meta charset="UTF-8">
+	<title>Local Storage</title>
+</head>
+<body>
+	
+	<div ng-controller = "bucketlist">
+		
+	</div>
+
+
+
+	<script src="angular.min.js"></script>	
+	<script>
+
+		var app = angular.module('localStorage', []);
+		app.controller('bucketlist', function($scope) {
+			$scope.list = [
+				{name: 'Go to vegas', done: false},
+				{name: 'Meet Pewdiepie and leafy', done: false},
+				{name: 'Build a minecraft using three js', done: false}
+			];
+			localStorage.setItem('list', JSON.stringify($scope.list));
+		});
+	</script>
+</body>
+</html>

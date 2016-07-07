@@ -35,6 +35,6 @@ app.controller('userController' ,function() {
 
 app.directive('helloWorld', function(){
 	return {
-		template: 'Hello World'	
+		template: 'Hello'
 	}
 });
