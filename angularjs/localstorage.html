@@ -7,9 +7,13 @@
 <body>
 	
 	<div ng-controller = "bucketlist">
-		
+		<ul>
+			<li ng-repeat = "item in items">
+				{{ item.name }}
+			</li>
+		</ul>
 	</div>
-
+	
 
 
 	<script src="angular.min.js"></script>	
@@ -17,11 +21,16 @@
 
 		var app = angular.module('localStorage', []);
 		app.controller('bucketlist', function($scope) {
+			// Retreive data from local Storage
+			$scope.items = JSON.parse(localStorage.getItem('list'));
+
 			$scope.list = [
 				{name: 'Go to vegas', done: false},
 				{name: 'Meet Pewdiepie and leafy', done: false},
 				{name: 'Build a minecraft using three js', done: false}
 			];
+
+			// Push the data from $scope.list to local storage
 			localStorage.setItem('list', JSON.stringify($scope.list));
 		});
 	</script>
