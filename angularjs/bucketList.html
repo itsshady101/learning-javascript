@@ -3,25 +3,88 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Local Storage</title>
+	<!-- Huh i should not write inline css but to finish this app in single i gotta do that sorry :( -->
 	<style>	
-		
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'open sans', arial, sans-serif;
+			font-size: 24px;
+			line-height: 1.8;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			background: url(https://images.unsplash.com/uploads/14134890947503c6effdc/72adf455?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=35104f19eccf4f9953f0eea9dc98c197) no-repeat;
+			background-size: cover;
+			color: #fff;
+			font-weight: 500;
+		}
+
+		ul li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.main {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		input[type=text] {
+	    	border: 1px solid #333;
+			box-shadow: none;
+			padding: 10px 10px;
+			border-radius: 5px;
+			width: 100%;
+			transition: all .3s ease-in-out;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+		input:focus {
+			border: 1px solid #333;
+			text-decoration: none;
+			border-radius: 5px;
+			outline: none;
+			box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+		}
+		.true {
+			text-decoration: line-through;
+		}
+		.submit-btn {
+			width: 100%;
+	    	background: #E53A40;
+	    	color: #fff;
+	    	border: none;
+	    	padding: 10px;
+	    	font-size: 18px;
+	    	border-radius: 5px;
+		}
+		.submit-btn.small {
+			padding: 5px;
+			background: #30A9DE;
+			width: 50%;
+			font-size: 14px;
+		}
 	</style>
 </head>
 <body>
-	
-	<div ng-controller = "bucketlist">
+	<div ng-controller = "bucketlist" class="main">
+		<h1 text-align="center">My BucketList</h1>
 		<ul>
 			<li ng-repeat = "item in fullList track by $index">
 				<input type="checkbox" ng-model="item.done">
 				<span class="{{ item.done }}">{{ item.name }}</span>
 			</li>
-			<button ng-click="remove()" ng-if="fullList.length > 0">Remove Checked</button>
+			<button ng-click="remove()" ng-if="fullList.length > 0" class="submit-btn small">Remove Checked</button>
 		</ul>
 
 		<form ng-submit="addItem()">
-			Wish Name: <input type="text" ng-model="wish" required>
+			<span>Wish Name:</span> <input type="text" ng-model="wish" required>
 			<br><br>
-			<input type="submit">
+			<button type="submit" class="submit-btn">Submit</button>
 		</form>
 	</div>
 	
