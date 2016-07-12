@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Using select boxes / Dropboxes</title>
+</head>
+<body>
+
+	<div ng-controller="dropdownController as dropdown">
+		{{ dropdown.message }} <br><br>
+		<select ng-model="names" ng-options="name for name in dropdown.names"></select><br><br>
+		You Selected: {{names}}
+	
+	</div>
+
+	<script src="angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+
+		app.controller('dropdownController', function(){
+			this.names = ["Mia", "Tom", "Alice", "Bob"];
+			this.message = "This is message to check ";
+		});
+
+	</script>
+	
+</body>
+</html>
