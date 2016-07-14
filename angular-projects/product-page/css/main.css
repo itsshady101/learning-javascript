@@ -1,0 +1,30 @@
+body {
+  font-family: 'Source Sans Pro', 'open sans', sans-serif;
+  line-height: 1.8; }
+
+nav.navbar.navbar-default {
+  background: #EC7357;
+  border: none;
+  padding: 10px 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+  margin-bottom: 0px; }
+
+.navbar-default .navbar-nav > li > a {
+  font-family: 'source sans pro', 'open sans', sans-serif;
+  font-size: 18px; }
+
+.jumbotron {
+  margin-top: 0px;
+  background: url(../img/pexels-photo-28209.jpg);
+  background-size: cover;
+  color: #fff;
+  padding-top: 120px;
+  padding-bottom: 120px; }
+  .jumbotron h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 69px;
+    color: #FDD692;
+    margin-bottom: 50px; }
+
+/*# sourceMappingURL=main.css.map */

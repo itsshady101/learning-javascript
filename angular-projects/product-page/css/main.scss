@@ -1,0 +1,43 @@
+// Colors
+$light-yellow: #FBFFB9;
+$yellow: #FDD692;
+$orange: #EC7357;
+$brown: #754F44;
+// Defaults
+body {
+  font-family: 'Source Sans Pro', 'open sans', sans-serif;
+  line-height: 1.8;
+}
+
+
+// Navigation
+nav.navbar.navbar-default {
+  background: $orange;
+  border: none;
+  padding: 10px 30px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  font-family: 'source sans pro', 'open sans', sans-serif;
+  font-size: 18px;
+}
+
+
+// Hero Area - Jumbotron
+.jumbotron {
+  margin-top: 0px;
+  background: url(../img/pexels-photo-28209.jpg);
+  background-size: cover;
+  color: #fff;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 69px;
+    color: $yellow;
+    margin-bottom: 50px;
+  }
+}
