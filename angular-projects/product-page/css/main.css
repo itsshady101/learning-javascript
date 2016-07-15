@@ -1,6 +1,17 @@
 body {
   font-family: 'open sans','Source Sans Pro', sans-serif;
-  line-height: 1.8; }
+  line-height: 1.8;
+  box-sizing: border-box; }
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
 
 nav.navbar.navbar-default {
   background: transparent;
@@ -48,7 +59,8 @@ a.navbar-brand {
   background-size: cover;
   color: #fff;
   padding-top: 120px;
-  padding-bottom: 120px; }
+  padding-bottom: 120px;
+  margin-bottom: 0px; }
   .jumbotron h1 {
     font-family: 'Playfair Display', serif;
     font-size: 80px;
@@ -60,8 +72,64 @@ a.navbar-brand {
     font-weight: 500;
     font-size: 20px;
     margin-bottom: 50px; }
+  .jumbotron a.btn.btn-primary {
+    background: transparent;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border-radius: 100px;
+    padding: 20px 50px;
+    transition: all 0.7s cubic-bezier(1, 0.07, 0.3, 1.56); }
+    .jumbotron a.btn.btn-primary:hover {
+      background: #fff;
+      color: #333; }
 
 .org {
   color: #FBFFB9; }
+
+h2 {
+  margin: 40px 0px; }
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 0px;
+  transition: all 0.4s ease;
+  margin: 20px 0px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15); }
+  .card img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px; }
+  .card:hover {
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15); }
+  .card .info {
+    padding: 40px; }
+    .card .info h4 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: .7px;
+      color: #754F44;
+      text-transform: uppercase; }
+    .card .info p {
+      font-size: 18px;
+      color: #333;
+      margin: 25px 0px; }
+    .card .info .btn {
+      background: #754F44;
+      color: #FBFFB9;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      border-radius: 60px;
+      padding: 13px 40px;
+      transition: all 0.4s ease; }
+      .card .info .btn:hover {
+        background: #34231f; }
+
+section#featured {
+  background: #fffcf6;
+  padding-bottom: 50px; }
 
 /*# sourceMappingURL=main.css.map */

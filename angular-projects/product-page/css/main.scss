@@ -1,7 +1,7 @@
- //Damn making design look good is taking hellalot of time :/
- //I have to design something generic to make this process faster.
- //And focus and devote more on angular and programming stuff.
-
+ // Damn making design look good is taking hellalot of time :/
+ // I have to design something generic to make this process faster.
+ // And focus and devote more on angular and programming stuff.
+ // Dang now its taking even more time
 
  // Colors
 $light-yellow: #FBFFB9;
@@ -12,9 +12,19 @@ $brown: #754F44;
 body {
   font-family: 'open sans','Source Sans Pro', sans-serif;
   line-height: 1.8;
+  box-sizing: border-box;
 }
 
-
+ html {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+ *, *:before, *:after {
+   -webkit-box-sizing: inherit;
+   -moz-box-sizing: inherit;
+   box-sizing: inherit;
+ }
 // Navigation
 nav.navbar.navbar-default {
   background: transparent;
@@ -73,7 +83,7 @@ a.navbar-brand {
   color: #fff;
   padding-top: 120px;
   padding-bottom: 120px;
-
+  margin-bottom: 0px;
   h1 {
     font-family: 'Playfair Display', serif;
     font-size: 80px;
@@ -88,8 +98,81 @@ a.navbar-brand {
     font-size: 20px;
     margin-bottom: 50px;
   }
+
+  a.btn.btn-primary {
+    background: transparent;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border-radius: 100px;
+    padding: 20px 50px;
+    transition: all 0.7s cubic-bezier(1,.07,.3,1.56);
+
+    &:hover {
+      background: #fff;
+      color: #333;
+    }
+  }
 }
 
 .org {
   color: $light-yellow;
+}
+
+h2 {
+  margin: 40px 0px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 0px;
+  transition: all 0.4s ease;
+  margin: 20px 0px;
+  box-sizing: border-box;
+  img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+  &:hover {
+    box-shadow: 0px 10px 50px rgba(0,0,0,0.15);
+  }
+  .info {
+    padding: 40px;
+    h4 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: .7px;
+      color: $brown;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+      margin: 25px 0px;
+    }
+
+    .btn {
+      background: $brown;
+      color: $light-yellow;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      border-radius: 60px;
+      padding: 13px 40px;
+      transition: all 0.4s ease;
+      &:hover {
+        background: darken($brown, 20);
+      }
+    }
+  }
+}
+
+
+section#featured {
+  background: lighten($yellow, 20);
+  padding-bottom: 50px;
 }
