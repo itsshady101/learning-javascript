@@ -17,6 +17,7 @@ nav.navbar.navbar-default {
   background: transparent;
   position: absolute;
   padding-top: 30px;
+  padding-bottom: 30px;
   width: 100%;
   margin: auto;
   top: 0;
@@ -24,34 +25,42 @@ nav.navbar.navbar-default {
   border-radius: 0px;
   margin-bottom: 0px; }
 
+nav.navbar-other {
+  position: relative !important;
+  background: #754F44 !important; }
+  nav.navbar-other .navbar-brand {
+    color: white; }
+    nav.navbar-other .navbar-brand:hover {
+      color: #FBFFB9; }
+
 .navbar-default .navbar-nav > li > a {
   font-family: 'open sans','source sans pro', 'open sans', sans-serif;
   font-size: 18px;
-  color: #FBFFB9;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: .6px;
   transition: color 0.6s ease;
-  padding: 0px 10px; }
-  .navbar-default .navbar-nav > li > a:after, .navbar-default .navbar-nav > li > a:before {
+  padding: 0px 10px;
+  margin-top: 25px; }
+  .navbar-default .navbar-nav > li > a:after {
     content: '';
     width: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
     height: 3px;
     background-color: #fff;
-    color: #000;
     display: block;
     transition: all 0.3s ease-in-out; }
   .navbar-default .navbar-nav > li > a:hover {
     color: #FBFFB9; }
-    .navbar-default .navbar-nav > li > a:hover:after, .navbar-default .navbar-nav > li > a:hover:before {
-      width: 70px; }
+    .navbar-default .navbar-nav > li > a:hover:after {
+      width: 30px; }
 
-a.navbar-brand {
-  color: #FDD692;
+.navbar-default .navbar-brand {
+  color: #754F44;
+  font-weight: 800;
   font-size: 30px;
-  margin-top: 10px; }
+  margin-top: 15px; }
 
 .jumbotron {
   margin-top: 0px;
@@ -89,13 +98,13 @@ a.navbar-brand {
   color: #FBFFB9; }
 
 h2 {
-  margin: 40px 0px; }
+  margin: 30px 0px; }
 
 .card {
   background: #fff;
   border-radius: 15px;
   padding: 0px;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   margin: 20px 0px;
   box-sizing: border-box;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15); }
@@ -128,8 +137,25 @@ h2 {
       .card .info .btn:hover {
         background: #34231f; }
 
+.input-group-addon {
+  padding: 6px 12px;
+  /* font-size: 14px; */
+  /* font-weight: 400; */
+  line-height: 1;
+  /* color: #555; */
+  /* text-align: center; */
+  /* background-color: #eee; */
+  border: 1px solid #ccc;
+  border-radius: 4px; }
+
 section#featured {
   background: #fffcf6;
   padding-bottom: 50px; }
+
+footer {
+  background: #754F44;
+  color: #e5d7d3;
+  padding: 30px 0px;
+  font-size: 18px; }
 
 /*# sourceMappingURL=main.css.map */

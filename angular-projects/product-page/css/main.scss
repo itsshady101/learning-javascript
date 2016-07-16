@@ -30,6 +30,7 @@ nav.navbar.navbar-default {
   background: transparent;
   position: absolute;
   padding-top: 30px;
+  padding-bottom: 30px;
   width: 100%;
   margin: auto;
   top: 0;
@@ -39,23 +40,34 @@ nav.navbar.navbar-default {
   margin-bottom: 0px;
 }
 
+nav.navbar-other {
+  position: relative !important;
+  background: $brown !important;
+
+  .navbar-brand {
+    color: lighten($light-yellow, 40);
+    &:hover {
+      color: $light-yellow;
+    }
+  }
+}
 .navbar-default .navbar-nav>li>a {
   font-family: 'open sans','source sans pro', 'open sans', sans-serif;
   font-size: 18px;
-  color: $light-yellow;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: lighten($light-yellow, 30);
+  font-weight: 500;
+  letter-spacing: .6px;
   transition: color 0.6s ease;
   padding: 0px 10px;
-  &:after, &:before {
+  margin-top: 25px;
+  &:after {
     content: '';
     width: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
     height: 3px;
     background-color: #fff;
-    color: #000;
+
     display: block;
     transition: all 0.3s ease-in-out;
   }
@@ -64,16 +76,17 @@ nav.navbar.navbar-default {
 
   &:hover {
     color: $light-yellow;
-    &:after, &:before{
-      width: 70px;
+    &:after{
+      width: 30px;
     }
   }
 }
-a.navbar-brand {
-  color: $yellow;
-  font-size: 30px;
-  margin-top: 10px;
-}
+ .navbar-default .navbar-brand {
+   color: $brown;
+   font-weight: 800;
+   font-size: 30px;
+   margin-top: 15px;
+ }
 
 // Hero Area - Jumbotron
 .jumbotron {
@@ -121,14 +134,14 @@ a.navbar-brand {
 }
 
 h2 {
-  margin: 40px 0px;
+  margin: 30px 0px;
 }
 
 .card {
   background: #fff;
   border-radius: 15px;
   padding: 0px;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   margin: 20px 0px;
   box-sizing: border-box;
   img {
@@ -171,8 +184,26 @@ h2 {
   }
 }
 
+ .input-group-addon {
+   padding: 6px 12px;
+   /* font-size: 14px; */
+   /* font-weight: 400; */
+   line-height: 1;
+   /* color: #555; */
+   /* text-align: center; */
+   /* background-color: #eee; */
+   border: 1px solid #ccc;
+   border-radius: 4px;
+ }
 
 section#featured {
   background: lighten($yellow, 20);
   padding-bottom: 50px;
+}
+
+footer {
+  background: $brown;
+  color: lighten($brown, 50);
+  padding: 30px 0px;
+  font-size: 18px;
 }
