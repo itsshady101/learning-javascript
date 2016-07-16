@@ -29,8 +29,9 @@ body {
 nav.navbar.navbar-default {
   background: transparent;
   position: absolute;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0px 5px 25px rgba(0,0,0,0.3);
   width: 100%;
   margin: auto;
   top: 0;
@@ -114,14 +115,17 @@ nav.navbar-other {
 
   a.btn.btn-primary {
     background: transparent;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
     border-radius: 100px;
     padding: 20px 50px;
     transition: all 0.7s cubic-bezier(1,.07,.3,1.56);
-
+    &.btn-sm {
+      font-size: 14px;
+      padding: 5px 20px;
+    }
     &:hover {
       background: #fff;
       color: #333;
@@ -177,6 +181,7 @@ h2 {
       border-radius: 60px;
       padding: 13px 40px;
       transition: all 0.4s ease;
+      margin-top: 20px;
       &:hover {
         background: darken($brown, 20);
       }
@@ -184,20 +189,42 @@ h2 {
   }
 }
 
+.form-control {
+  &.search {
+    background: $yellow;
+    border: none;
+    padding: 25px;
+    /* color: #fff !important; */
+    font-weight: 400;
+    box-shadow: none;
+    font-size: 18px;
+    line-height:2;
+    border: 4px solid $yellow;
+    transition: all 0.3s ease;
+    &:focus {
+      background: transparent;
+    }
+  }
+}
+
  .input-group-addon {
-   padding: 6px 12px;
-   /* font-size: 14px; */
-   /* font-weight: 400; */
+   padding: 6px 20px;
+   font-size: 18px;
+   font-weight: 400;
    line-height: 1;
-   /* color: #555; */
-   /* text-align: center; */
-   /* background-color: #eee; */
-   border: 1px solid #ccc;
+   color: #555;
+   text-align: center;
+   background-color: #FDD692;
+   border: 2px solid #FDD692;
    border-radius: 4px;
  }
 
 section#featured {
   background: lighten($yellow, 20);
+  padding-bottom: 50px;
+}
+
+section#search {
   padding-bottom: 50px;
 }
 
