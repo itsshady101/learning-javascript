@@ -1,12 +1,15 @@
 body {
   font-family: 'open sans','Source Sans Pro', sans-serif;
   line-height: 1.8;
-  box-sizing: border-box; }
+  font-size: 18px;
+  box-sizing: border-box;
+  height: 100%; }
 
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100%; }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
@@ -18,7 +21,7 @@ nav.navbar.navbar-default {
   position: absolute;
   padding-top: 10px;
   padding-bottom: 10px;
-  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
   width: 100%;
   margin: auto;
   top: 0;
@@ -102,7 +105,7 @@ nav.navbar-other {
   color: #FBFFB9; }
 
 h2 {
-  margin: 30px 0px; }
+  margin: 40px 0px; }
 
 .card {
   background: #fff;
@@ -137,8 +140,7 @@ h2 {
       font-weight: 700;
       border-radius: 60px;
       padding: 13px 40px;
-      transition: all 0.4s ease;
-      margin-top: 20px; }
+      transition: all 0.4s ease; }
       .card .info .btn:hover {
         background: #34231f; }
 
@@ -179,5 +181,35 @@ footer {
   color: #e5d7d3;
   padding: 30px 0px;
   font-size: 18px; }
+
+.center {
+  text-align: center; }
+
+#single-page {
+  padding: 50px 0px; }
+  #single-page h2 {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 700; }
+  #single-page p {
+    font-size: 18px; }
+  #single-page h4 {
+    display: inline;
+    font-size: 26px;
+    margin-top: 3px; }
+  #single-page a.btn.btn-success {
+    margin-top: -6px;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 60px;
+    background: #EC7357;
+    border-color: #EC7357;
+    box-shadow: 0px 5px 20px #FDD692;
+    transition: all 0.3s ease-in-out; }
+    #single-page a.btn.btn-success:hover {
+      box-shadow: 0px 3px 3px #FDD692; }
 
 /*# sourceMappingURL=main.css.map */
