@@ -1,5 +1,5 @@
 body {
-  font-family: 'open sans','Source Sans Pro', sans-serif;
+  font-family: 'league spartan bold','open sans','Source Sans Pro', sans-serif;
   line-height: 1.8;
   font-size: 18px;
   box-sizing: border-box;
@@ -38,7 +38,7 @@ nav.navbar-other {
       color: #FBFFB9; }
 
 .navbar-default .navbar-nav > li > a {
-  font-family: 'open sans','source sans pro', 'open sans', sans-serif;
+  font-family: 'league spartan bold','open sans','source sans pro', 'open sans', sans-serif;
   font-size: 18px;
   color: white;
   font-weight: 500;

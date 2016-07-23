@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app>
+<html lang="en" data-ng-app="watchApp">
 <head>
     <meta charset="UTF-8">
     <title>Yeah Best ecommerce ever</title>
@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body data-ng-controller="watchCont as watch">
 
     <div data-ng-include="'app/common_includes/header.html'"></div>
     <div data-ng-include="'app/common_includes/jumbotron.html'"></div>
@@ -67,5 +67,6 @@
 	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="app/app.js"></script>
 </body>
 </html>
